@@ -1,0 +1,7 @@
+flask
+pillow
+pyodbc
+numpy
+deepface
+tf-keras
+azure-storage-blob

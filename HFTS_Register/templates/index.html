@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Handsfree Travel</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href=".././static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register Your Face for Handsfree Travel</h1>
+
+        <!-- Success or Error Message -->
+        {% if message %}
+            <div class="message {{ message_type }}">
+                {{ message }}
+            </div>
+        {% endif %}
+
+        <form action="/register" method="POST" enctype="multipart/form-data">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" required><br><br>
+
+            <label for="image">Upload Your Face Photo:</label>
+            <input type="file" name="image" accept="image/*" required><br><br>
+
+            <label for="balance">Your Balance:</label>
+            <input type="number" name="balance" step="0.01" required><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Button for Deleting All Blobs and Users -->
+        <form action="/delete_all" method="POST">
+            <button type="submit">Delete All Blobs</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+opencv-python
+azure-storage-blob
+flask 
+opencv-python 
+deepface.detectors
+tf-keras
+tensorflow 
+scipy
+pyodbc
+geopy
+simpleaudio
+scikit-learn
+waitress
